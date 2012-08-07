@@ -1,5 +1,5 @@
 <?php
-include('classes.php');
+include('define.php');
 
 $config = new Config( "" );
 $db = new Database( $config );
