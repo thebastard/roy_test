@@ -1,7 +1,7 @@
 <?php
 include('define.php');
 
-$config = new Config( "" );
+$config = new Config( HOST_NAME, USER_NAME, PASSWORD, DATABASE, '' );
 $db = new Database( $config );
 
 $ping = $db->pingServer();
@@ -20,4 +20,8 @@ $result = $db->fetchAssoc($sql);
 $result = $db->fetchArray($sql);
 
 echo $db->lastQuery();
+
+$type = 'home';
+$template = new Template( $type );
+echo $template->getTemplate();
 ?>
