@@ -1,3 +1,3 @@
 <?php
-echo "paus?";
+echo "Nice!";
 ?>
