@@ -6,6 +6,7 @@ define( "DATABASE", "" );
 
 define( "SITE_NAME", "" );
 define( "SITE_URL", "" );
+define( "SITE_PATH", "" );
 
 include( "classes.php" );
 ?>

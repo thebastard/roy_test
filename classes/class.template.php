@@ -19,17 +19,17 @@ class Template
 
     private function header()
     {
-        return include( "header.php" );
+        return include( SITE_PATH . "header.php" );
     }
 
     private function content()
     {
-        return include( $this->type . ".php" );
+        return include( SITE_PATH . $this->type . ".php" );
     }
 
     private function footer()
     {
-        return include( "footer.php" );
+        return include( SITE_PATH . "footer.php" );
     }
 
     public function setTemplate()
