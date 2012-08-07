@@ -20,9 +20,12 @@ class Database
         try
         {
             $this->connection = mysqli_connect( $this->config->hostname, $this->config->username, $this->config->password );
-            if( !is_object( $this->connection ) ) {
-                throw new exception('Could not connect to ' . $this->config->hostname );
+            
+            if( !is_object( $this->connection ) ) 
+            {
+                throw new exception( 'Could not connect to ' . $this->config->hostname );
             }
+
             $this->selectdb = mysqli_select_db( $this->connection, $this->config->database );
         }
         catch( exception $e )
