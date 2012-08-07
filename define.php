@@ -8,6 +8,7 @@ define( 'CLASS_DIR', dirname(__FILE__) . "/classes");
 
 define( "SITE_NAME", "" );
 define( "SITE_URL", "" );
+define( "SITE_PATH", "" );
 
 function __autoload( $class_name ) 
 {
