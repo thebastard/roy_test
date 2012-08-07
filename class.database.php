@@ -13,6 +13,7 @@ class Database
 
     function __destruct()
     {
+        mysqli_close( $this->connection );
     }
 
     public function openConnection()
@@ -152,7 +153,7 @@ class Database
     {
         try
         {
-            return mysqli_fetch_assoc( $result );
+            return mysqli_fetch_array( $result );
         }
         catch( exception $e )
         {
