@@ -1,5 +1,5 @@
 <?php
-define( "", "" );
+define( "HOST", "localhost" );
 
 include( "classes.php" );
 ?>
