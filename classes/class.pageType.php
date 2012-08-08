@@ -1,16 +1,34 @@
 <?php
-class PageTest
+class PageType
 {
-    $type = '404';
+    $type = '';
     $page = '';
 
-    function __construct()
+    function __construct( $page )
     {
+        $this->page = $page;
+        setPageType( $this->page );
     }
 
-    public function setPageType( $type )
+    private function getPageTypeFromPage( $page )
     {
-        $this->type = $type;
+        switch( $page )
+        {
+            case "":        $type = 'home';     break;
+            case "news":    $type = 'news';     break;
+        }
+
+        if( !empty( $page ) && !empty( $type ) )
+        {
+            $type = '404';
+        }
+
+        return $type;
+    }
+
+    public function setPageType( $page )
+    {
+        $this->type = getPageTypeFromPage( $page );
     }
 
     public function getPageType()

@@ -1,5 +1,11 @@
 <?php
 include('define.php');
+$pageType = new PageType( REQUEST_URI );
+$template = new Template( $pageType->getPageType() );
+echo $template->getTemplate();
+
+/**
+  * how it works **
 
 $config = new Config( HOST_NAME, USER_NAME, PASSWORD, DATABASE, '' );
 $db = new Database( $config );
@@ -20,8 +26,5 @@ $result = $db->fetchAssoc($sql);
 $result = $db->fetchArray($sql);
 
 echo $db->lastQuery();
-
-$type = 'home';
-$template = new Template( $type );
-echo $template->getTemplate();
+*/
 ?>
