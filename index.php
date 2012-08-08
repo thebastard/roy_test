@@ -1,5 +1,8 @@
 <?php
+session_start();
+
 include('define.php');
+
 $pageType = new PageType( REQUEST_URI );
 $template = new Template( $pageType->getPageType() );
 echo $template->getTemplate();
