@@ -13,7 +13,7 @@ define( "SITE_DIR", dirname( __FILE__ ) );
 define( "SITE_NAME", "" );
 define( "SITE_URL", "" );
 
-// classes
+// Classes
 function __autoload( $class_name ) 
 {
     require( CLASS_DIR . '/class.' . $class_name . '.php' );

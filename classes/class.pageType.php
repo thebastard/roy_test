@@ -10,6 +10,10 @@ class PageType
         setPageType( $this->page );
     }
 
+    function __destruct()
+    {
+    }
+
     private function getPageTypeFromPage( $page )
     {
         switch( $page )
