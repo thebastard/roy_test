@@ -26,7 +26,7 @@ class PageType
         return $type;
     }
 
-    public function setPageType( $page )
+    private function setPageType( $page )
     {
         $this->type = getPageTypeFromPage( $page );
     }
